@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -10,6 +11,7 @@ public class NewPlayerMovement : MonoBehaviour
     public GameObject[] jackOLanterns;
     public PumpkinManager pumpkinManager;
     private Lantern nearbyLantern;
+    public TextMeshProUGUI UIText;
 
     // Update is called once per frame
     void Update()
@@ -19,7 +21,9 @@ public class NewPlayerMovement : MonoBehaviour
             nearbyLantern.LightUp();
             if (pumpkinManager.CompletenessCheck())
             {
-                //Display win banner in UI
+                UIText.text = "You Win!";
+                UIText.gameObject.SetActive(true);
+                StartCoroutine("Reset");
                 Debug.Log("You win!");
             }
         }
@@ -45,5 +49,11 @@ public class NewPlayerMovement : MonoBehaviour
         {
             nearbyLantern = null;
         }
+    }
+
+    IEnumerator Reset()
+    {
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadScene(0);
     }
 }

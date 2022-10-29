@@ -4,6 +4,8 @@ using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.AI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SimpleFSM : MonoBehaviour
 {
@@ -19,6 +21,8 @@ public class SimpleFSM : MonoBehaviour
     public float chaseRange = 5.0f;
     public float attackRange = 1.0f;
     public float returnRange = 7.5f;
+
+    public TextMeshProUGUI UIText;
     public enum FSMState
     {
         None,
@@ -120,6 +124,10 @@ public class SimpleFSM : MonoBehaviour
         agent.isStopped = true;
 
         //Attack animation goes here
+        UIText.text = "You Lose!";
+        UIText.gameObject.SetActive(true);
+
+        StartCoroutine("Reset");
 
         //Check the distance with the player tank
         float dist = Vector3.Distance(transform.position, playerTransform.position);
@@ -148,5 +156,11 @@ public class SimpleFSM : MonoBehaviour
         {
             pointIndex = 0;
         }
+    }
+
+    IEnumerator Reset()
+    {
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
