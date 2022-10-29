@@ -14,7 +14,7 @@ public class CameraOrbit : MonoBehaviour
 
     void Start()
     {
-        offset = new Vector3(player.position.x, player.position.y + yAngle, player.position.z + zAngle);
+        offset = new Vector3(0, yAngle, zAngle);
     }
 
     void LateUpdate()

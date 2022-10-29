@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private float vertical;
 
     private CharacterController controller;
+    private NavMeshAgent agent;
 
     public GameObject[] jackOLanterns;
     private Lantern nearbyLantern;
@@ -19,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        agent = GetComponent<NavMeshAgent>();
         jackOLanterns = GameObject.FindGameObjectsWithTag("JackOLantern");
     }
 
@@ -53,9 +56,10 @@ public class PlayerMovement : MonoBehaviour
         forward.Normalize();
         right.Normalize();
 
-        Vector3 DesiredMoveDirection = forward * vertical + right * horizontal;
-
-        controller.Move(DesiredMoveDirection * speed);
+        Vector3 desiredMoveDirection = forward * vertical + right * horizontal;
+ 
+        agent.Move(desiredMoveDirection * Time.deltaTime * agent.speed);
+        agent.SetDestination(transform.position + desiredMoveDirection);
     }
 
     private void OnTriggerEnter(Collider other)
