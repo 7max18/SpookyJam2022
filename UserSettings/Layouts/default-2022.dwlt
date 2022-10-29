@@ -318,22 +318,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity Projects\SpookyJam2022
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4e5e0000
-    m_LastClickedID: 24142
-    m_ExpandedIDs: 00000000225e000000ca9a3bffffff7f
+    m_SelectedIDs: 845e0000
+    m_LastClickedID: 24196
+    m_ExpandedIDs: 00000000565e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -448,9 +448,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7c5b0000
-      m_LastClickedID: 23420
-      m_ExpandedIDs: 98faffff34fbffff1c5b0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: b8f5ffff22fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -594,7 +594,7 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 1
+      displayed: 0
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -780,13 +780,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.18537685, y: 0.5020189, z: -0.11106588, w: 0.8374748}
+    m_Target: {x: 0.07975333, y: 0.92044735, z: -0.271438, w: 0.2699231}
     speed: 2
-    m_Value: {x: 0.1842777, y: 0.50090593, z: -0.11003153, w: 0.83846766}
+    m_Value: {x: 0.0801532, y: 0.91998357, z: -0.2728019, w: 0.2697869}
   m_Size:
-    m_Target: 14.470703
+    m_Target: 46.351665
     speed: 2
-    m_Value: 14.470703
+    m_Value: 48.535774
   m_Ortho:
     m_Target: 0
     speed: 2
