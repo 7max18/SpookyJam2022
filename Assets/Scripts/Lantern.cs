@@ -21,6 +21,7 @@ public class Lantern : MonoBehaviour
     {
         //Animate lighting up
         lit = true;
+        GetComponent<Light>().enabled = true;
         Debug.Log("Lantern Lit!");
     }
 }
