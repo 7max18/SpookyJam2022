@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8712074699828040377}
   - component: {fileID: 8867830169802481783}
   - component: {fileID: 3469287838155511058}
+  - component: {fileID: 879049201195747484}
   m_Layer: 0
   m_Name: JackOLanternTemp
   m_TagString: JackOLantern
@@ -210,3 +211,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &879049201195747484
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3901160932268966358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8947986338066111166, guid: 3bbc1e0a58927344d9d127f4c7365a99, type: 3}
